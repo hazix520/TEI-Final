@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>TEI Final Project</title>
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<meta charset="UTF-8">
+
+<!-- import external scripts here --> 
+
+<!-- <script type="text/javascript" src="#" ></script> --> 
+	
+<!-- modify CSS properties here --> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #15151A;
+}
+.header {
+    padding: 0, 20%px; /* some padding */
+    text-align: center; /* center the text */
+    background: #15151A;
+    color: #E4E4E9; /* white text color */
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1%;
+}
+/* Increase the font size of the <h1> element */
+.header h1 {
+    font-size: 70px;
+    color: #E4E4E9;
+	}
+	
+.footer{
+	margin-top: auto;
+	font-size: 20px;
+    text-align: center; /* center the text */
+    background: #15151A;
+    color: #E4E4E9; /* white text color */
+    width: 100%;
+    height: 100%;
+	}
+	
+/* Main column */
+.main {
+    flex: 100%;
+    font-size: 20px;
+    color: #15151A;
+    background-color: #606070;
+    padding: 10%px; /* Some padding */
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    padding-top: 1%;
+}
+.main h1{
+	font-size: 70px;
+    color: #15151A;
+	vertical-align: middle;
+
+	}
+.main h2{
+	font-size: 30px;
+    color: #15151A;
+	text-align:left;
+	padding-bottom: 5%;
+		flex: 100%;
+	}
+.links {
+	padding: 10px;
+    text-align: center;
+    background-color: #15151a;
+	font-size: 15px;
+    color: #E4E4E9;
+}
+	
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+	grid-template-rows: auto;
+    width: 100%;
+    padding-bottom: 10%;
+	text-align: center;
+}
+.grid-item {
+    padding: 2%;
+    font-size: 30px;
+    text-align: center;
+	transition: .5s ease;
+	width: 97%;
+	vertical-align: middle;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #27292D;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.tablink:hover {
+  background-color: #5A5966;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+	
+  display: none;
+  padding: 50px 20px;
+  height: 100%;
+}
+
+#Project {background-color: #445A66;}
+#Documentation {background-color: #445A66;}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+.grid-container {
+    grid-template-columns: repeat(2,2fr);
+}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+.grid-container {
+    grid-template-columns: repeat(1,2fr);
+}
+}
+</style>
+</head><body style="margin: 0;">
+<div class="header">
+  <h1>Shadow Puzzle</h1>
+  <p style="font-size: 22px">Haoming Zhang and Hunter Simone</p>
+	
+</div>
+
+<button class="tablink" onclick="openPage('Project', this, '#686C7F')" id="defaultOpen">Project</button>
+<button class="tablink" onclick="openPage('Documentation', this, '#686C7F')">Documentation</button>
+  
+<div id="Project" class ="tabcontent">
+	
+	<div class="grid-container">
+	
+	<div class="grid-item"> 
+				<br> </br> 
+		<br> </br>
+		<h3>This is the final version of our project that is in the escape room</h3>
+	   
+	  </div>
+		
+	<div class="grid-item"> 
+
+		<iframe width="854" height="480" src="https://www.youtube.com/embed/IwXwIw0noPI">
+</iframe>
+	  </div>
+	
+		<div class="grid-item"> 
+	   <iframe width="854" height="480" src="https://www.youtube.com/embed/_R_H3aWYaWc">
+</iframe>
+	  </div>
+		
+	<div class="grid-item"> 
+		<br> </br> 
+		<br> </br>
+		<h3>This version includes a clock mechanic that changes the angle on the light source when looking at it.</h3>
+	  </div>
+
+<div class="grid-item"> 
+			<br> </br> 
+		<br> </br>
+<br> </br>
+<br> </br>
+		<h3>This is a sword cutting demo made after finishing the shadow puzzle for the escape room.</h3>
+	   
+	  </div>
+		
+	<div class="grid-item"> 
+
+		<iframe width="854" height="480" src="https://www.youtube.com/embed/snnFosBr8s0">
+</iframe>
+	  </div>
+	
+	
+</div>
+</div>
+	
+<div id="Documentation" class="tabcontent">
+	
+	<div class="grid-item">
+	<iframe class="pdf" src="img/TEI Documentation.pdf" width="800px" height="1000px" > </iframe>
+	</div>
+	
+	</div>
+	
+
+
+
+	
+
+	<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+	
+</body>
+</html>
